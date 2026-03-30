@@ -1,4 +1,4 @@
-### Script to generate Figures 2C and 2E
+### Script to generate Figures 3C and 3E
 # pairwise t-tests: time window vs mean baseline
 
 import os, re
@@ -6,7 +6,6 @@ import pandas as pd
 from scipy.stats import ttest_rel
 from statsmodels.stats.multitest import multipletests
 
-# --- Settings ---
 folder = r"D:\results_movingwindow"
 age_bins = [(26, 28, "26–28"), (29, 30, "29–30"), (31, 32, "31–32")]
 n_windows = 37
