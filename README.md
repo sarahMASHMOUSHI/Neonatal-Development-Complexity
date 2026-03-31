@@ -20,8 +20,7 @@ The repository is organized into two main folders:
     1.4 calc_PCIst_moving.py
         Computes PCIst using a 2-second sliding window (−10s to +10s around event onset, step size = 0.5s).
 
-⚠️ Important:
-calc_PCIst.py must be available and executed/imported before running scripts 1.2 – 1.4.
+    Important: calc_PCIst.py must be available and executed/imported before running scripts 1.2 – 1.4.
 
 
 2. Figures
