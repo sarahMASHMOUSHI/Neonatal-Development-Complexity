@@ -7,7 +7,8 @@ from scipy.stats import ttest_ind
 import pingouin as pg
 from statsmodels.stats.multitest import multipletests
 
-folder = r"D:\response_event"
+folder = r"D:\response_event" # for figure 2B
+#folder = r"D:\response_post" # for figure 2D
 
 # Load data and assign age groups
 subject_data = []
@@ -47,7 +48,16 @@ df = pd.DataFrame(subject_data)
 
 # === Boxplot ===
 fig, ax = plt.subplots(figsize=(4, 3))
-df.boxplot(column="Mean PCI", by="Age Group", grid=False, patch_artist=True, ax=ax)
+df.boxplot(
+    column="Mean PCI", by="Age Group", 
+    grid=False, patch_artist=True, ax=ax
+    showfliers=False, 
+    boxprops=dict(facecolor='lightgray', color='black'),       
+    medianprops=dict(color='black', linewidth=1.5),              
+    whiskerprops=dict(color='black', linewidth=1.5),           
+    capprops=dict(color='black', linewidth=1.5)               
+)
+
 ax.set_xlabel("Age Group (wGA)", fontweight='semibold')
 ax.set_ylabel("Mean Complexity Index", fontweight='semibold')
 plt.suptitle("")
