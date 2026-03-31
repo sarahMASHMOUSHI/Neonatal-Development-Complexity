@@ -2,7 +2,7 @@
 Implementation of PCIst (Perturbational Complexity Index based on State Transitions)
 
 This code is adapted from:
-Comolatti et al., 2021
+Comolatti et al., 2019
 "A fast and general method to empirically estimate the complexity of brain responses to perturbations"
 """                     
 
