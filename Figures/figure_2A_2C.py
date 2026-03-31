@@ -8,7 +8,9 @@ from scipy.stats import pearsonr
 import statsmodels.api as sm
 import pingouin as pg
 
-folder = r"D:\response_event"
+folder = r"D:\response_event" # for figure 2A
+#folder = r"D:\response_post" # for figure 2C
+
 data = []
 
 for file in glob.glob(os.path.join(folder, "*.xlsx")):
@@ -41,7 +43,8 @@ model = sm.OLS(means, X).fit()
 
 # Plot
 plt.figure(figsize=(4, 3))
-plt.scatter(wga, means, color='gray', alpha=0.7)
+plt.scatter(wga, means, color='darkorange', alpha=0.7) # for figure 2A
+#plt.scatter(wga, means, color='darkgreen', alpha=0.7) # for fgure 2C
 
 x_line = np.linspace(wga.min(), wga.max(), 200)
 y_pred = model.predict(sm.add_constant(x_line))
@@ -55,6 +58,8 @@ plt.yticks(fontweight='bold')
 ax = plt.gca()
 ax.spines['top'].set_visible(False)
 ax.spines['right'].set_visible(False)
+ax.spines['bottom'].set_linewidth(1.5)
+ax.spines['left'].set_linewidth(1.5)
 
 plt.tight_layout()
 plt.show()
