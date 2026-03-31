@@ -4,8 +4,7 @@ This repository contains scripts associated with the manuscript:
 
 The repository is organized into two main folders:
 
-1. Complexity-calculation
-    This folder contains scripts for computing the Perturbational Complexity Index (PCIst):
+1. Complexity-calculation: folder contains scripts for computing the Perturbational Complexity Index (PCIst):
 
     1.1 calc_PCIst.py
         Core implementation of PCIst, adapted from:
@@ -23,8 +22,7 @@ The repository is organized into two main folders:
     Important: calc_PCIst.py must be available and executed/imported before running scripts 1.2 – 1.4.
 
 
-2. Figures
-    This folder contains scripts used to reproduce the figures from the manuscript:
+2. Figures: folder contains scripts used to reproduce the figures from the manuscript:
 
     2.1 figure_2A_2C.py
         - Scatter plots of complexity vs. gestational age
